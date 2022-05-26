@@ -39,8 +39,8 @@ public class Movement : MonoBehaviour
 
     private void DataInput()
     {
-        _vertical = Input.GetAxis("Vertical");
-        _horizontal = Input.GetAxis("Horizontal");
+        _vertical = UniversalUIHandler.Instance.VERTICAL;
+        _horizontal = UniversalUIHandler.Instance.HORIZONTAL;
     }
      
 
