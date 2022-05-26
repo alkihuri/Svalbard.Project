@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 910064492360839008}
-  m_LocalRotation: {x: 0.22975291, y: 0.000000020569436, z: -0.0000000048557847, w: 0.973249}
+  m_LocalRotation: {x: 0.22975291, y: -0.000000018722702, z: 0.00000000441983, w: 0.973249}
   m_LocalPosition: {x: 0, y: 4.65, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -142,7 +142,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4615830273657404177}
-  m_LocalRotation: {x: 0.22975291, y: 0.000000020569436, z: -0.0000000048557847, w: 0.973249}
+  m_LocalRotation: {x: 0.22975291, y: -0.000000018722702, z: 0.00000000441983, w: 0.973249}
   m_LocalPosition: {x: 0, y: 4.65, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -288,6 +288,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 692390179311640252}
+  - component: {fileID: 4864024997081513568}
   m_Layer: 0
   m_Name: CameraSettings
   m_TagString: Untagged
@@ -311,6 +312,19 @@ Transform:
   m_Father: {fileID: 9021582137083257936}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4864024997081513568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5077810700627382833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 806d1856721b76445b6e5c76012371ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _photonView: {fileID: 0}
 --- !u!1 &7687275025496963852
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +337,7 @@ GameObject:
   - component: {fileID: 716416956330669736}
   - component: {fileID: 8210156821186229593}
   m_Layer: 0
-  m_Name: Voice
+  m_Name: Speaker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -615,6 +629,7 @@ GameObject:
   - component: {fileID: 9021582137083257938}
   - component: {fileID: 9021582137083257940}
   - component: {fileID: 9021582137083257939}
+  - component: {fileID: 8181238357384840000}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -712,10 +727,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126494ae2a10a34499272ed97a6c9f5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logLevel: 2
+  logLevel: 1
   ignoreGlobalLogLevel: 0
   recorderInUse: {fileID: 0}
-  speakerInUse: {fileID: 0}
+  speakerInUse: {fileID: 8210156821186229593}
   AutoCreateRecorderIfNotFound: 0
-  UsePrimaryRecorder: 0
+  UsePrimaryRecorder: 1
   SetupDebugSpeaker: 0
+--- !u!114 &8181238357384840000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9021582137083257951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c7b7ba004603340b75c5bd5618c67e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

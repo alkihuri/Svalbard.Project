@@ -26,20 +26,18 @@ public class Movement : MonoBehaviour
         if (!_photonView.IsMine)
             return;
 
-        InputDataHandler();  
+        DataInput();
+        ThirdPersonControl();
         _player.SetDestination(_destinationPoint);
     }
 
     private void ThirdPersonControl()
-    {
-        if (!_player.isOnNavMesh)
-            return;
-
+    { 
         _destinationPoint = transform.position + transform.forward * _vertical + transform.right * _horizontal;
     }
      
 
-    private void InputDataHandler()
+    private void DataInput()
     {
         _vertical = Input.GetAxis("Vertical");
         _horizontal = Input.GetAxis("Horizontal");
