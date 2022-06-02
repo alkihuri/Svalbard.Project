@@ -20,7 +20,7 @@ public class PlayerAudioController : MonoBehaviour, ISpeaker
 
     public void TurnOn()
     {
-        _audio.mute = true;
+        _audio.mute = false;
     }
 
      
