@@ -24,7 +24,13 @@ namespace Networking
             GameStateMachine.Instance.SetState(new GameIsConnected().ApplyState());  // пример
         }
 
-
+        private void Update()
+        {
+            if(Input.GetKeyDown(KeyCode.R))
+            {
+                GameStateMachine.Instance.SetState(new GameIsCrushed().ApplyState());
+            }
+        }
         public override void OnConnectedToMaster()
         {
             Debug.Log("Присоеденяемся...");
