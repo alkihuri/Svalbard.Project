@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+ 
 public class MonoSinglethon  <T> : MonoBehaviour where T : MonoBehaviour
 {
     private static T _instance;

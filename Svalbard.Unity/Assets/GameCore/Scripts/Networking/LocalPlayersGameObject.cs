@@ -2,19 +2,22 @@ using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class LocalPlayersGameObject : MonoBehaviour
+namespace Networking
 {
 
-    [SerializeField] PhotonView _photonView;
-    // Start is called before the first frame update
-    void Start()
+    public class LocalPlayersGameObject : MonoBehaviour
     {
-        _photonView = GetComponentInParent<PhotonView>();
-        TurnOffGameObject();
-    }
-    public void TurnOffGameObject()
-    {
-         gameObject.SetActive(_photonView.IsMine);
+
+        [SerializeField] PhotonView _photonView;
+        // Start is called before the first frame update
+        void Start()
+        {
+            _photonView = GetComponentInParent<PhotonView>();
+            TurnOffGameObject();
+        }
+        public void TurnOffGameObject()
+        {
+            gameObject.SetActive(_photonView.IsMine);
+        }
     }
 }
